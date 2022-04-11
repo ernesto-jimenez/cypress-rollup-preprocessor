@@ -34,7 +34,8 @@ async function processFile (options: PreprocessorOptions, file: FileObject): Pro
 
   const outputOptions: OutputOptions = {
     file: file.outputPath,
-    format: 'umd',
+    format: 'es',
+    inlineDynamicImports: true,
   }
 
   if (file.shouldWatch) {
